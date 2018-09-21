@@ -31,8 +31,9 @@ function displayCommits() {
       commit =>
         '<li><strong>' +
         commit.author.name +
+        '</strong>'
         commit.author.login +
-        '</strong> - ' +
+        ' - ' +
         commit.commit.message +
         '</li>'
     )
@@ -49,15 +50,10 @@ function getBranches() {
 }
 
 function displayBranches() {
-  const commits = JSON.parse(this.responseText);
-  const commitsList = `<ul>${commits
+  const branches = JSON.parse(this.responseText);
+  const branchesList = `<ul>${branches
    .map(
-     commit =>
-       '<li><strong>' +
-       commit.author.login +
-       '</strong> - ' +
-       commit.commit.message +
-       '</li>'
+     commit =>'<li><strong>' + branch.name + '</strong></li>'
    )
    .join('')}</ul>`;
   document.getElementById('commits').innerHTML = commitsList;
