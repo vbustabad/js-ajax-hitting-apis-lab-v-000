@@ -41,7 +41,7 @@ function displayCommits() {
   document.getElementById('commits').innerHTML = commitsList;
 }
 
-function getBranches() {
+function getBranches(el) {
   const name = el.dataset.repository;
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayBranches);
