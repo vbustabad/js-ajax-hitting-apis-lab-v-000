@@ -53,8 +53,8 @@ function displayBranches() {
   const branches = JSON.parse(this.responseText);
   const branchesList = `<ul>${branches
    .map(
-     commit =>'<li><strong>' + branch.name + '</strong></li>'
+     commit =>'<li>' + branch.name + '</li>'
    )
    .join('')}</ul>`;
-  document.getElementById('branches').innerHTML = branchesList;
+  document.getElementById('details').innerHTML = branchesList;
 }
