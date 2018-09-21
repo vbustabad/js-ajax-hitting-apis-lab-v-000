@@ -16,5 +16,5 @@ function showRepositories() {
   document.getElementById('repositories').innerHTML = repoList;
 }
 
-function getCommits() {
-}
+// function getCommits() {
+// }
